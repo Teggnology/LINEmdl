@@ -4,7 +4,7 @@ class message_output_linenotifier extends message_output {
     function send_message($eventdata) {
         global $CFG;
         require_once($CFG->dirroot.'/message/output/linenotifier/lib/LINEAPI.php');
-        $LINE = get_user_preferences('LINEID', null, $eventdata->userfrom->id);
+        $LINE = get_user_preferences('LINEID', null, $eventdata->userto->id);
         $body = [
             "to"    => $LINE,
             "messages"  => [

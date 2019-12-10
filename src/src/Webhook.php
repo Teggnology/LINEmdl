@@ -76,17 +76,5 @@ switch($json->events[0]->type){
         }
         break;
     default:
-        $body = [
-            "to"    => "",
-            "messages"  => []
-        ];
-        $body["to"] = "U2333f4b460b94d5b03ab32e07d1060e1";
-        $body["messages"][0] = [
-            "type"      => "text",
-            "text"      => $json->events[0]->type
-        ];
-        if($body["to"] != null){
-            push($body);
-        }
         break;
 }
