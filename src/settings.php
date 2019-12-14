@@ -14,7 +14,7 @@ if ($ADMIN->fulltree) {
                     get_string('configChannelSecret', 'message_linenotifier'), null, PARAM_TEXT));
     $settings->add(new admin_setting_configtext('LINEAccessToken',
                     get_string('LINEAccessToken', 'message_linenotifier'),
-                    get_string('configLINEAccessToken', 'message_linenotifier'). "expires". json_decode($CFG->LINEAccessToken)->expires, null, PARAM_TEXT));
+                    get_string('configLINEAccessToken', 'message_linenotifier'). "<br>\nexpires:". json_decode($CFG->LINEAccessToken)->expires, null, PARAM_TEXT));
 
     $url = new moodle_url('https://manager.line.biz/', array('sesskey' => sesskey()));
     $link = html_writer::link($url, get_string('link', 'message_linenotifier'));

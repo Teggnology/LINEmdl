@@ -53,7 +53,7 @@ class message_output_linenotifier extends message_output {
         global $USER, $OUTPUT, $CFG;
 
         if(get_user_preferences('LINEID', false, $USER->id) === false){
-            $string = '<a href="'. $CFG->AccountID.'">'.
+            $string = '<a href="https://line.me/R/ti/p/'. $CFG->AccountID.'">'.
                     '<img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"><br>'.
                     '<img src="https://qr-official.line.me/sid/M/842wflgy.png">'.
                 "</a>";
