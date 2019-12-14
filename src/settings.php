@@ -12,6 +12,9 @@ if ($ADMIN->fulltree) {
     $settings->add(new admin_setting_configtext('ChannelSecret',
                     get_string('ChannelSecret', 'message_linenotifier'),
                     get_string('configChannelSecret', 'message_linenotifier'), null, PARAM_TEXT));
+    $settings->add(new admin_setting_configtext('LINEAccessToken',
+                    get_string('LINEAccessToken', 'message_linenotifier'),
+                    get_string('configLINEAccessToken', 'message_linenotifier'), null, PARAM_TEXT));
 
     $url = new moodle_url('https://manager.line.biz/', array('sesskey' => sesskey()));
     $link = html_writer::link($url, get_string('link', 'message_linenotifier'));
